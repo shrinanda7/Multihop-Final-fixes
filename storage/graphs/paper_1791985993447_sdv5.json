@@ -1,0 +1,681 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791985993447_sdv5_e1",
+        "name": "GraphRAG",
+        "type": "Architecture",
+        "description": "Graph‑based retrieval‑augmented generation system for global sensemaking"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e2",
+        "name": "Retrieval‑Augmented Generation (RAG)",
+        "type": "Method",
+        "description": "General paradigm of retrieving external documents and feeding them to an LLM"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e3",
+        "name": "Vector RAG",
+        "type": "Method",
+        "description": "Conventional RAG that retrieves records via semantic vector similarity"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e4",
+        "name": "Large Language Model (LLM)",
+        "type": "Concept",
+        "description": "Generative language model used for retrieval, graph construction and answer generation"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e5",
+        "name": "GPT‑4",
+        "type": "Architecture",
+        "description": "State‑of‑the‑art LLM employed as the backbone model in experiments"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e6",
+        "name": "Llama",
+        "type": "Architecture",
+        "description": "Open‑source LLM referenced as a comparable model"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e7",
+        "name": "Gemini",
+        "type": "Architecture",
+        "description": "Google’s LLM mentioned as capable of sensemaking"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e8",
+        "name": "Knowledge Graph",
+        "type": "Concept",
+        "description": "Entity‑centric graph built from source documents"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e9",
+        "name": "Community Summary",
+        "type": "Concept",
+        "description": "Aggregated summary for a tightly‑connected subgraph of entities"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e10",
+        "name": "Map‑Reduce Query Processing",
+        "type": "Method",
+        "description": "Two‑stage answer generation: parallel partial answers then reduction"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e11",
+        "name": "LLM‑as‑a‑Judge Technique",
+        "type": "Method",
+        "description": "Evaluation method that uses one LLM to generate questions and another to judge answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e12",
+        "name": "Query‑Focused Summarization (QFS)",
+        "type": "Task",
+        "description": "Summarization conditioned on a specific user query"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e13",
+        "name": "Global Sensemaking",
+        "type": "Task",
+        "description": "Reasoning over an entire corpus to extract high‑level themes"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e14",
+        "name": "RealWorldDataset1",
+        "type": "Dataset",
+        "description": "First large‑scale text corpus used for evaluation (≈1 M tokens)"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e15",
+        "name": "RealWorldDataset2",
+        "type": "Dataset",
+        "description": "Second large‑scale text corpus used for evaluation"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e16",
+        "name": "Comprehensiveness Metric",
+        "type": "Metric",
+        "description": "Measures coverage of relevant information in generated answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e17",
+        "name": "Diversity Metric",
+        "type": "Metric",
+        "description": "Measures variety of distinct concepts presented in answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e18",
+        "name": "LangChain Integration",
+        "type": "Architecture",
+        "description": "Open‑source library extension that implements GraphRAG"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e19",
+        "name": "LlamaIndex Integration",
+        "type": "Architecture",
+        "description": "Open‑source library extension that implements GraphRAG"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e20",
+        "name": "NebulaGraph Integration",
+        "type": "Architecture",
+        "description": "Graph database extension that implements GraphRAG"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e4",
+        "type": "USES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e8",
+        "type": "BUILD_USES",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e9",
+        "type": "GENERATES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e9",
+        "target": "paper_1791985993447_sdv5_e10",
+        "type": "FEEDS_INTO",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e10",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "PRODUCES",
+        "weight": 0.87,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e4",
+        "target": "paper_1791985993447_sdv5_e8",
+        "type": "CONSTRUCTS",
+        "weight": 0.93,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e4",
+        "target": "paper_1791985993447_sdv5_e9",
+        "type": "GENERATES",
+        "weight": 0.89,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e5",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "POWERED_BY",
+        "weight": 0.96,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e3",
+        "target": "paper_1791985993447_sdv5_e2",
+        "type": "IS_A",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e3",
+        "type": "IMPROVES_UPON",
+        "weight": 0.94,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e14",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e15",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e3",
+        "target": "paper_1791985993447_sdv5_e14",
+        "type": "EVALUATED_ON",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e3",
+        "target": "paper_1791985993447_sdv5_e15",
+        "type": "EVALUATED_ON",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e16",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e17",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.89,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "EVALUATES",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e3",
+        "type": "EVALUATES",
+        "weight": 0.86,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e16",
+        "type": "USES",
+        "weight": 0.82,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e17",
+        "type": "USES",
+        "weight": 0.82,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e18",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "IMPLEMENTS",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e19",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "IMPLEMENTS",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e20",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "IMPLEMENTS",
+        "weight": 0.78,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e12",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "SUPPORTED_BY",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e13",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "ENABLED_BY",
+        "weight": 0.94,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e9",
+        "target": "paper_1791985993447_sdv5_e13",
+        "type": "FACILITATES",
+        "weight": 0.87,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e10",
+        "target": "paper_1791985993447_sdv5_e13",
+        "type": "SUPPORTS",
+        "weight": 0.86,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e1",
+        "target": "paper_1791985993447_sdv5_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e2",
+        "target": "paper_1791985993447_sdv5_e1",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 30,
+    "articulation_points": [
+      "paper_1791985993447_sdv5_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e5"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e18"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e19"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e20"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e12"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e6"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e7"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791985993447_sdv5_e8",
+        "name": "Knowledge Graph",
+        "type": "Concept",
+        "description": "Entity‑centric graph built from source documents"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e14",
+        "name": "RealWorldDataset1",
+        "type": "Dataset",
+        "description": "First large‑scale text corpus used for evaluation (≈1 M tokens)"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e15",
+        "name": "RealWorldDataset2",
+        "type": "Dataset",
+        "description": "Second large‑scale text corpus used for evaluation"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e16",
+        "name": "Comprehensiveness Metric",
+        "type": "Metric",
+        "description": "Measures coverage of relevant information in generated answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e17",
+        "name": "Diversity Metric",
+        "type": "Metric",
+        "description": "Measures variety of distinct concepts presented in answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e6",
+        "name": "Llama",
+        "type": "Architecture",
+        "description": "Open‑source LLM referenced as a comparable model"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e7",
+        "name": "Gemini",
+        "type": "Architecture",
+        "description": "Google’s LLM mentioned as capable of sensemaking"
+      },
+      {
+        "id": "scc_cluster_7_paper_17",
+        "name": "SCC [Retrieval‑Augmented Cyclic Loop]",
+        "type": "Supernode",
+        "description": "Contracted quotient supernode containing 7 cyclically interdependent components: Retrieval‑Augmented Generation (RAG), Vector RAG, Global Sensemaking, Map‑Reduce Query Processing, Community Summary, Large Language Model (LLM), GraphRAG.",
+        "is_supernode": true,
+        "member_count": 7,
+        "member_node_ids": [
+          "paper_1791985993447_sdv5_e2",
+          "paper_1791985993447_sdv5_e3",
+          "paper_1791985993447_sdv5_e13",
+          "paper_1791985993447_sdv5_e10",
+          "paper_1791985993447_sdv5_e9",
+          "paper_1791985993447_sdv5_e4",
+          "paper_1791985993447_sdv5_e1"
+        ],
+        "member_nodes": [
+          {
+            "id": "paper_1791985993447_sdv5_e2",
+            "name": "Retrieval‑Augmented Generation (RAG)",
+            "type": "Method",
+            "description": "General paradigm of retrieving external documents and feeding them to an LLM"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e3",
+            "name": "Vector RAG",
+            "type": "Method",
+            "description": "Conventional RAG that retrieves records via semantic vector similarity"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e13",
+            "name": "Global Sensemaking",
+            "type": "Task",
+            "description": "Reasoning over an entire corpus to extract high‑level themes"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e10",
+            "name": "Map‑Reduce Query Processing",
+            "type": "Method",
+            "description": "Two‑stage answer generation: parallel partial answers then reduction"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e9",
+            "name": "Community Summary",
+            "type": "Concept",
+            "description": "Aggregated summary for a tightly‑connected subgraph of entities"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e4",
+            "name": "Large Language Model (LLM)",
+            "type": "Concept",
+            "description": "Generative language model used for retrieval, graph construction and answer generation"
+          },
+          {
+            "id": "paper_1791985993447_sdv5_e1",
+            "name": "GraphRAG",
+            "type": "Architecture",
+            "description": "Graph‑based retrieval‑augmented generation system for global sensemaking"
+          }
+        ]
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e5",
+        "name": "GPT‑4",
+        "type": "Architecture",
+        "description": "State‑of‑the‑art LLM employed as the backbone model in experiments"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e11",
+        "name": "LLM‑as‑a‑Judge Technique",
+        "type": "Method",
+        "description": "Evaluation method that uses one LLM to generate questions and another to judge answers"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e12",
+        "name": "Query‑Focused Summarization (QFS)",
+        "type": "Task",
+        "description": "Summarization conditioned on a specific user query"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e18",
+        "name": "LangChain Integration",
+        "type": "Architecture",
+        "description": "Open‑source library extension that implements GraphRAG"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e19",
+        "name": "LlamaIndex Integration",
+        "type": "Architecture",
+        "description": "Open‑source library extension that implements GraphRAG"
+      },
+      {
+        "id": "paper_1791985993447_sdv5_e20",
+        "name": "NebulaGraph Integration",
+        "type": "Architecture",
+        "description": "Graph database extension that implements GraphRAG"
+      }
+    ],
+    "edges": [
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e8",
+        "type": "BUILD_USES",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e5",
+        "target": "scc_cluster_7_paper_17",
+        "type": "POWERED_BY",
+        "weight": 0.96,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e14",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e15",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e16",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e17",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.89,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "scc_cluster_7_paper_17",
+        "type": "EVALUATES",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e16",
+        "type": "USES",
+        "weight": 0.82,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e11",
+        "target": "paper_1791985993447_sdv5_e17",
+        "type": "USES",
+        "weight": 0.82,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e18",
+        "target": "scc_cluster_7_paper_17",
+        "type": "IMPLEMENTS",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e19",
+        "target": "scc_cluster_7_paper_17",
+        "type": "IMPLEMENTS",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e20",
+        "target": "scc_cluster_7_paper_17",
+        "type": "IMPLEMENTS",
+        "weight": 0.78,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985993447_sdv5_e12",
+        "target": "scc_cluster_7_paper_17",
+        "type": "SUPPORTED_BY",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_7_paper_17",
+        "target": "paper_1791985993447_sdv5_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      }
+    ],
+    "node_count": 14,
+    "edge_count": 15,
+    "articulation_points": [
+      "paper_1791985993447_sdv5_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e5"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e18"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e19"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e20"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e12"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e6"
+      ],
+      [
+        "paper_1791985993447_sdv5_e1",
+        "paper_1791985993447_sdv5_e7"
+      ]
+    ],
+    "compression_ratio": 0.7,
+    "diagnostics": {
+      "total_nodes": 20,
+      "num_sccs": 14,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_scc_size": 7,
+      "max_scc_ratio": 0.35,
+      "has_giant_scc": true
+    }
+  }
+}

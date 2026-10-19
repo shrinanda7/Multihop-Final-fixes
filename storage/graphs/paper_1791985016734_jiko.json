@@ -1,0 +1,615 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791985016734_jiko_e1",
+        "name": "Retrieval-Augmented Generation (RAG)",
+        "type": "Method",
+        "description": "General-purpose fine-tuning approach that combines parametric and non‑parametric memory for language generation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e2",
+        "name": "Dense Passage Retriever (DPR)",
+        "type": "Method",
+        "description": "Neural retriever that encodes queries and retrieves top‑K Wikipedia passages via Maximum Inner Product Search."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e3",
+        "name": "BART",
+        "type": "Architecture",
+        "description": "Pre‑trained seq2seq transformer used as the parametric generator in RAG."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e4",
+        "name": "T5",
+        "type": "Architecture",
+        "description": "Pre‑trained seq2seq transformer referenced as a baseline model."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e5",
+        "name": "Wikipedia",
+        "type": "Dataset",
+        "description": "Large encyclopedic corpus used to build the dense vector index for retrieval."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e6",
+        "name": "Natural Questions",
+        "type": "Dataset",
+        "description": "Open‑domain question answering benchmark used for evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e7",
+        "name": "WebQuestions",
+        "type": "Dataset",
+        "description": "Open‑domain QA dataset derived from Google queries."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e8",
+        "name": "CuratedTrec",
+        "type": "Dataset",
+        "description": "Curated open‑domain QA dataset for evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e9",
+        "name": "TriviaQA",
+        "type": "Dataset",
+        "description": "QA dataset used to compare specialized pre‑training objectives."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e10",
+        "name": "MS‑MARCO",
+        "type": "Dataset",
+        "description": "Passage ranking dataset used for knowledge‑intensive generation evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e11",
+        "name": "Jeopardy",
+        "type": "Dataset",
+        "description": "Question generation benchmark assessing generation quality."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e12",
+        "name": "FEVER",
+        "type": "Dataset",
+        "description": "Fact verification dataset used to evaluate factual consistency."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e13",
+        "name": "Exact Match (EM)",
+        "type": "Metric",
+        "description": "Metric measuring token‑level exact match between prediction and reference."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e14",
+        "name": "F1 Score",
+        "type": "Metric",
+        "description": "Harmonic mean of precision and recall for token overlap."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e15",
+        "name": "Diversity",
+        "type": "Metric",
+        "description": "Metric assessing lexical variety of generated text."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e16",
+        "name": "Non‑Parametric Memory",
+        "type": "Concept",
+        "description": "External retrieval‑based knowledge store accessed by the retriever."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e17",
+        "name": "Maximum Inner Product Search (MIPS)",
+        "type": "Concept",
+        "description": "Similarity search method used to retrieve top‑K documents."
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e2",
+        "type": "USES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e3",
+        "type": "USES",
+        "weight": 0.94,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e16",
+        "type": "COMBINES",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e2",
+        "target": "paper_1791985016734_jiko_e5",
+        "type": "RETRIEVES_FROM",
+        "weight": 0.96,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e3",
+        "target": "paper_1791985016734_jiko_e5",
+        "type": "GENERATES_ON",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e6",
+        "type": "EVALUATED_ON",
+        "weight": 0.92,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e7",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e8",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e4",
+        "type": "IMPROVES_UPON",
+        "weight": 0.83,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e13",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e14",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.87,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e15",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e5",
+        "type": "TRAINED_ON",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e10",
+        "type": "TRAINED_ON",
+        "weight": 0.86,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e11",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e12",
+        "type": "TRAINED_ON",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e2",
+        "target": "paper_1791985016734_jiko_e17",
+        "type": "USES",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e3",
+        "target": "paper_1791985016734_jiko_e2",
+        "type": "CROSS_ATTENTION",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791985016734_jiko_e1",
+        "target": "paper_1791985016734_jiko_e9",
+        "type": "EVALUATED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791985016734_jiko_e2",
+        "target": "paper_1791985016734_jiko_e1",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 17,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791985016734_jiko_e2",
+      "paper_1791985016734_jiko_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791985016734_jiko_e2",
+        "paper_1791985016734_jiko_e17"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e16"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e6"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e7"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e8"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e4"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e13"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e14"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e15"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e10"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e11"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e12"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e9"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791985016734_jiko_e5",
+        "name": "Wikipedia",
+        "type": "Dataset",
+        "description": "Large encyclopedic corpus used to build the dense vector index for retrieval."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e17",
+        "name": "Maximum Inner Product Search (MIPS)",
+        "type": "Concept",
+        "description": "Similarity search method used to retrieve top‑K documents."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e16",
+        "name": "Non‑Parametric Memory",
+        "type": "Concept",
+        "description": "External retrieval‑based knowledge store accessed by the retriever."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e6",
+        "name": "Natural Questions",
+        "type": "Dataset",
+        "description": "Open‑domain question answering benchmark used for evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e7",
+        "name": "WebQuestions",
+        "type": "Dataset",
+        "description": "Open‑domain QA dataset derived from Google queries."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e8",
+        "name": "CuratedTrec",
+        "type": "Dataset",
+        "description": "Curated open‑domain QA dataset for evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e4",
+        "name": "T5",
+        "type": "Architecture",
+        "description": "Pre‑trained seq2seq transformer referenced as a baseline model."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e13",
+        "name": "Exact Match (EM)",
+        "type": "Metric",
+        "description": "Metric measuring token‑level exact match between prediction and reference."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e14",
+        "name": "F1 Score",
+        "type": "Metric",
+        "description": "Harmonic mean of precision and recall for token overlap."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e15",
+        "name": "Diversity",
+        "type": "Metric",
+        "description": "Metric assessing lexical variety of generated text."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e10",
+        "name": "MS‑MARCO",
+        "type": "Dataset",
+        "description": "Passage ranking dataset used for knowledge‑intensive generation evaluation."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e11",
+        "name": "Jeopardy",
+        "type": "Dataset",
+        "description": "Question generation benchmark assessing generation quality."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e12",
+        "name": "FEVER",
+        "type": "Dataset",
+        "description": "Fact verification dataset used to evaluate factual consistency."
+      },
+      {
+        "id": "paper_1791985016734_jiko_e9",
+        "name": "TriviaQA",
+        "type": "Dataset",
+        "description": "QA dataset used to compare specialized pre‑training objectives."
+      },
+      {
+        "id": "scc_cluster_14_paper_17",
+        "name": "SCC [BART Cyclic Loop]",
+        "type": "Supernode",
+        "description": "Contracted quotient supernode containing 3 cyclically interdependent components: BART, Dense Passage Retriever (DPR), Retrieval-Augmented Generation (RAG).",
+        "is_supernode": true,
+        "member_count": 3,
+        "member_node_ids": [
+          "paper_1791985016734_jiko_e3",
+          "paper_1791985016734_jiko_e2",
+          "paper_1791985016734_jiko_e1"
+        ],
+        "member_nodes": [
+          {
+            "id": "paper_1791985016734_jiko_e3",
+            "name": "BART",
+            "type": "Architecture",
+            "description": "Pre‑trained seq2seq transformer used as the parametric generator in RAG."
+          },
+          {
+            "id": "paper_1791985016734_jiko_e2",
+            "name": "Dense Passage Retriever (DPR)",
+            "type": "Method",
+            "description": "Neural retriever that encodes queries and retrieves top‑K Wikipedia passages via Maximum Inner Product Search."
+          },
+          {
+            "id": "paper_1791985016734_jiko_e1",
+            "name": "Retrieval-Augmented Generation (RAG)",
+            "type": "Method",
+            "description": "General-purpose fine-tuning approach that combines parametric and non‑parametric memory for language generation."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e16",
+        "type": "COMBINES",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e5",
+        "type": "RETRIEVES_FROM",
+        "weight": 0.96,
+        "is_bridge": false
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e6",
+        "type": "EVALUATED_ON",
+        "weight": 0.92,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e7",
+        "type": "EVALUATED_ON",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e8",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e4",
+        "type": "IMPROVES_UPON",
+        "weight": 0.83,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e13",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e14",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.87,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e15",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e10",
+        "type": "TRAINED_ON",
+        "weight": 0.86,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e11",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e12",
+        "type": "TRAINED_ON",
+        "weight": 0.84,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e17",
+        "type": "USES",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791985016734_jiko_e9",
+        "type": "EVALUATED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      }
+    ],
+    "node_count": 15,
+    "edge_count": 14,
+    "articulation_points": [
+      "paper_1791985016734_jiko_e2",
+      "paper_1791985016734_jiko_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791985016734_jiko_e2",
+        "paper_1791985016734_jiko_e17"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e16"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e6"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e7"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e8"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e4"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e13"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e14"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e15"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e10"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e11"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e12"
+      ],
+      [
+        "paper_1791985016734_jiko_e1",
+        "paper_1791985016734_jiko_e9"
+      ]
+    ],
+    "compression_ratio": 0.882,
+    "diagnostics": {
+      "total_nodes": 17,
+      "num_sccs": 15,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "max_scc_size": 3,
+      "max_scc_ratio": 0.176,
+      "has_giant_scc": false
+    }
+  }
+}

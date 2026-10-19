@@ -1,0 +1,716 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791977513533_h3ks_e1",
+        "name": "Deep Convolutional Neural Network (CNN)",
+        "type": "Architecture",
+        "description": "Core deep learning architecture used for image classification"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e2",
+        "name": "U-Net Segmentation",
+        "type": "Architecture",
+        "description": "Encoder‑decoder CNN architecture commonly used for medical image segmentation"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e3",
+        "name": "ResNet",
+        "type": "Architecture",
+        "description": "Residual network architecture employed as a baseline model"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e4",
+        "name": "AlexNet",
+        "type": "Architecture",
+        "description": "Early deep CNN model referenced for comparison"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e5",
+        "name": "VGN",
+        "type": "Architecture",
+        "description": "Vision‑Guided Network mentioned among state‑of‑the‑art models"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e6",
+        "name": "Recurrent Neural Network (RNN)",
+        "type": "Architecture",
+        "description": "Sequence modeling network cited in related work"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e7",
+        "name": "Support Vector Machine (SVM)",
+        "type": "Architecture",
+        "description": "Traditional classifier used in hybrid retinal disease detection approaches"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e8",
+        "name": "EyeNet Dataset",
+        "type": "Dataset",
+        "description": "Benchmark dataset containing 32 classes of retinal disease images"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e9",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correctly classified samples"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e10",
+        "name": "Precision",
+        "type": "Metric",
+        "description": "True‑positive rate among predicted positives"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e11",
+        "name": "Recall",
+        "type": "Metric",
+        "description": "True‑positive rate among actual positives"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e12",
+        "name": "Memory Consumption",
+        "type": "Metric",
+        "description": "Amount of RAM required during model inference/training"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e13",
+        "name": "Time Consumption",
+        "type": "Metric",
+        "description": "Computation time per training epoch or inference step"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e14",
+        "name": "Multi‑Class Retinal Disease Classification",
+        "type": "Task",
+        "description": "Classification of retinal images into multiple disease categories"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e15",
+        "name": "Minimal Memory CNN Model",
+        "type": "Architecture",
+        "description": "Proposed memory‑efficient CNN for multi‑class retinal disease detection"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e16",
+        "name": "Feature Map Transfer",
+        "type": "Concept",
+        "description": "Process of moving encoder feature maps to the decoder"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e17",
+        "name": "Pooling Indices",
+        "type": "Concept",
+        "description": "Indices stored during pooling to aid decoder up‑sampling"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e18",
+        "name": "Automatic Disease Detection (ADD)",
+        "type": "Concept",
+        "description": "Computer‑aided system for early disease identification"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e19",
+        "name": "Epochs",
+        "type": "Metric",
+        "description": "Number of complete passes over the training dataset"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e20",
+        "name": "Deep Learning",
+        "type": "Concept",
+        "description": "Subset of machine learning using multi‑layer neural networks"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e1",
+        "type": "USES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e2",
+        "type": "IMPROVES_UPON",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e8",
+        "type": "TRAINED_ON",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e9",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.94,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e12",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e3",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e4",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e5",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e10",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e11",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e13",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e14",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e16",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e17",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e18",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e19",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e20",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e2",
+        "target": "paper_1791977513533_h3ks_e1",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791977513533_h3ks_e15",
+      "paper_1791977513533_h3ks_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e8"
+      ],
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e9"
+      ],
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e12"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e3"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e4"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e5"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e6"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e7"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e10"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e11"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e13"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e14"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e16"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e17"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e18"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e19"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e20"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791977513533_h3ks_e3",
+        "name": "ResNet",
+        "type": "Architecture",
+        "description": "Residual network architecture employed as a baseline model"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e4",
+        "name": "AlexNet",
+        "type": "Architecture",
+        "description": "Early deep CNN model referenced for comparison"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e5",
+        "name": "VGN",
+        "type": "Architecture",
+        "description": "Vision‑Guided Network mentioned among state‑of‑the‑art models"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e6",
+        "name": "Recurrent Neural Network (RNN)",
+        "type": "Architecture",
+        "description": "Sequence modeling network cited in related work"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e7",
+        "name": "Support Vector Machine (SVM)",
+        "type": "Architecture",
+        "description": "Traditional classifier used in hybrid retinal disease detection approaches"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e10",
+        "name": "Precision",
+        "type": "Metric",
+        "description": "True‑positive rate among predicted positives"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e11",
+        "name": "Recall",
+        "type": "Metric",
+        "description": "True‑positive rate among actual positives"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e13",
+        "name": "Time Consumption",
+        "type": "Metric",
+        "description": "Computation time per training epoch or inference step"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e14",
+        "name": "Multi‑Class Retinal Disease Classification",
+        "type": "Task",
+        "description": "Classification of retinal images into multiple disease categories"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e16",
+        "name": "Feature Map Transfer",
+        "type": "Concept",
+        "description": "Process of moving encoder feature maps to the decoder"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e17",
+        "name": "Pooling Indices",
+        "type": "Concept",
+        "description": "Indices stored during pooling to aid decoder up‑sampling"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e18",
+        "name": "Automatic Disease Detection (ADD)",
+        "type": "Concept",
+        "description": "Computer‑aided system for early disease identification"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e19",
+        "name": "Epochs",
+        "type": "Metric",
+        "description": "Number of complete passes over the training dataset"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e20",
+        "name": "Deep Learning",
+        "type": "Concept",
+        "description": "Subset of machine learning using multi‑layer neural networks"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e1",
+        "name": "Deep Convolutional Neural Network (CNN)",
+        "type": "Architecture",
+        "description": "Core deep learning architecture used for image classification",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e2",
+        "name": "U-Net Segmentation",
+        "type": "Architecture",
+        "description": "Encoder‑decoder CNN architecture commonly used for medical image segmentation"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e8",
+        "name": "EyeNet Dataset",
+        "type": "Dataset",
+        "description": "Benchmark dataset containing 32 classes of retinal disease images"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e9",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correctly classified samples"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e12",
+        "name": "Memory Consumption",
+        "type": "Metric",
+        "description": "Amount of RAM required during model inference/training"
+      },
+      {
+        "id": "paper_1791977513533_h3ks_e15",
+        "name": "Minimal Memory CNN Model",
+        "type": "Architecture",
+        "description": "Proposed memory‑efficient CNN for multi‑class retinal disease detection",
+        "is_connector": true
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e1",
+        "type": "USES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e2",
+        "type": "IMPROVES_UPON",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e8",
+        "type": "TRAINED_ON",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e9",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.94,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e15",
+        "target": "paper_1791977513533_h3ks_e12",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e3",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e4",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e5",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e10",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e11",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e13",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e14",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e16",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e17",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e18",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e19",
+        "type": "MEASURED_BY",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e1",
+        "target": "paper_1791977513533_h3ks_e20",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791977513533_h3ks_e2",
+        "target": "paper_1791977513533_h3ks_e1",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791977513533_h3ks_e15",
+      "paper_1791977513533_h3ks_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e8"
+      ],
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e9"
+      ],
+      [
+        "paper_1791977513533_h3ks_e15",
+        "paper_1791977513533_h3ks_e12"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e3"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e4"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e5"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e6"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e7"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e10"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e11"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e13"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e14"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e16"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e17"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e18"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e19"
+      ],
+      [
+        "paper_1791977513533_h3ks_e1",
+        "paper_1791977513533_h3ks_e20"
+      ]
+    ],
+    "compression_ratio": 1,
+    "diagnostics": {
+      "total_nodes": 20,
+      "num_sccs": 20,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_scc_size": 1,
+      "max_scc_ratio": 0.05,
+      "has_giant_scc": false
+    }
+  }
+}

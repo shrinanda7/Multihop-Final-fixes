@@ -1,0 +1,579 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791986062886_ve91_e1",
+        "name": "GRAG",
+        "type": "Method",
+        "description": "Graph Retrieval-Augmented Generation framework integrating graph retrieval with LLMs."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e2",
+        "name": "RAG",
+        "type": "Method",
+        "description": "Retrieval-Augmented Generation focusing on individual documents."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e3",
+        "name": "Large Language Model (LLM)",
+        "type": "Architecture",
+        "description": "Neural language model used for generation."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e4",
+        "name": "Divide-and-Conquer Retrieval Strategy",
+        "type": "Method",
+        "description": "Linear-time algorithm retrieving optimal textual subgraph via ego-graphs and pruning."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e5",
+        "name": "Graph Soft Pruning Mechanism",
+        "type": "Method",
+        "description": "Approximate subgraph selection technique to avoid exhaustive search."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e6",
+        "name": "Ego-Graph Retrieval",
+        "type": "Method",
+        "description": "Retrieves most relevant local subgraph centered on query node."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e7",
+        "name": "Hard Prompt (Text View)",
+        "type": "Concept",
+        "description": "Hard prompts generated as hierarchical text descriptions encoding topology."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e8",
+        "name": "Soft Prompt (Graph View)",
+        "type": "Concept",
+        "description": "Soft prompts generated as graph tokens via graph encoder."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e9",
+        "name": "Graph Encoder",
+        "type": "Architecture",
+        "description": "Neural encoder that transforms graph structure into token embeddings."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e10",
+        "name": "Hierarchical Text Description Generator",
+        "type": "Method",
+        "description": "Algorithm converting textual graphs into structured text prompts."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e11",
+        "name": "Multi-hop Graph Reasoning",
+        "type": "Task",
+        "description": "Reasoning over multiple hops in textual graphs."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e12",
+        "name": "Graph Reasoning Benchmarks",
+        "type": "Dataset",
+        "description": "Standard datasets for evaluating multi-hop graph reasoning."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e13",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correct answers."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e14",
+        "name": "F1 Score",
+        "type": "Metric",
+        "description": "Harmonic mean of precision and recall."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e15",
+        "name": "Frozen LLM",
+        "type": "Architecture",
+        "description": "Pretrained LLM used without fine-tuning, combined with GRAG."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e16",
+        "name": "Fine-tuned LLM",
+        "type": "Architecture",
+        "description": "LLM adapted on graph reasoning data."
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e4",
+        "type": "PROPOSES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e3",
+        "type": "INTEGRATES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e4",
+        "target": "paper_1791986062886_ve91_e5",
+        "type": "UTILIZES",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e4",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "RETRIEVES",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e5",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "APPROXIMATES",
+        "weight": 0.8,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e7",
+        "type": "FEEDS_INTO",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e8",
+        "type": "FEEDS_INTO",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e8",
+        "target": "paper_1791986062886_ve91_e9",
+        "type": "GENERATED_BY",
+        "weight": 0.87,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e9",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "ENCODES",
+        "weight": 0.84,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e7",
+        "target": "paper_1791986062886_ve91_e10",
+        "type": "GENERATED_BY",
+        "weight": 0.86,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e10",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "TRANSFORMS",
+        "weight": 0.83,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e3",
+        "target": "paper_1791986062886_ve91_e11",
+        "type": "PERFORMS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e3",
+        "target": "paper_1791986062886_ve91_e12",
+        "type": "EVALUATED_ON",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e12",
+        "type": "EVALUATED_ON",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e2",
+        "type": "OUTPERFORMS",
+        "weight": 0.94,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e15",
+        "type": "OUTPERFORMS",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e15",
+        "target": "paper_1791986062886_ve91_e16",
+        "type": "OUTPERFORMS",
+        "weight": 0.89,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e13",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e1",
+        "target": "paper_1791986062886_ve91_e14",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e2",
+        "target": "paper_1791986062886_ve91_e1",
+        "type": "BASELINE_FOR",
+        "weight": 0.8,
+        "is_bridge": true
+      }
+    ],
+    "node_count": 16,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791986062886_ve91_e3",
+      "paper_1791986062886_ve91_e15",
+      "paper_1791986062886_ve91_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791986062886_ve91_e3",
+        "paper_1791986062886_ve91_e11"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e2"
+      ],
+      [
+        "paper_1791986062886_ve91_e15",
+        "paper_1791986062886_ve91_e16"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e15"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e13"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e14"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791986062886_ve91_e6",
+        "name": "Ego-Graph Retrieval",
+        "type": "Method",
+        "description": "Retrieves most relevant local subgraph centered on query node."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e5",
+        "name": "Graph Soft Pruning Mechanism",
+        "type": "Method",
+        "description": "Approximate subgraph selection technique to avoid exhaustive search."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e4",
+        "name": "Divide-and-Conquer Retrieval Strategy",
+        "type": "Method",
+        "description": "Linear-time algorithm retrieving optimal textual subgraph via ego-graphs and pruning."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e11",
+        "name": "Multi-hop Graph Reasoning",
+        "type": "Task",
+        "description": "Reasoning over multiple hops in textual graphs."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e12",
+        "name": "Graph Reasoning Benchmarks",
+        "type": "Dataset",
+        "description": "Standard datasets for evaluating multi-hop graph reasoning."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e3",
+        "name": "Large Language Model (LLM)",
+        "type": "Architecture",
+        "description": "Neural language model used for generation.",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791986062886_ve91_e10",
+        "name": "Hierarchical Text Description Generator",
+        "type": "Method",
+        "description": "Algorithm converting textual graphs into structured text prompts."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e7",
+        "name": "Hard Prompt (Text View)",
+        "type": "Concept",
+        "description": "Hard prompts generated as hierarchical text descriptions encoding topology."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e9",
+        "name": "Graph Encoder",
+        "type": "Architecture",
+        "description": "Neural encoder that transforms graph structure into token embeddings."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e8",
+        "name": "Soft Prompt (Graph View)",
+        "type": "Concept",
+        "description": "Soft prompts generated as graph tokens via graph encoder."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e16",
+        "name": "Fine-tuned LLM",
+        "type": "Architecture",
+        "description": "LLM adapted on graph reasoning data."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e15",
+        "name": "Frozen LLM",
+        "type": "Architecture",
+        "description": "Pretrained LLM used without fine-tuning, combined with GRAG.",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791986062886_ve91_e13",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correct answers."
+      },
+      {
+        "id": "paper_1791986062886_ve91_e14",
+        "name": "F1 Score",
+        "type": "Metric",
+        "description": "Harmonic mean of precision and recall."
+      },
+      {
+        "id": "scc_cluster_14_paper_17",
+        "name": "SCC [RAG Cyclic Loop]",
+        "type": "Supernode",
+        "description": "Contracted quotient supernode containing 2 cyclically interdependent components: RAG, GRAG.",
+        "is_supernode": true,
+        "member_count": 2,
+        "member_node_ids": [
+          "paper_1791986062886_ve91_e2",
+          "paper_1791986062886_ve91_e1"
+        ],
+        "member_nodes": [
+          {
+            "id": "paper_1791986062886_ve91_e2",
+            "name": "RAG",
+            "type": "Method",
+            "description": "Retrieval-Augmented Generation focusing on individual documents."
+          },
+          {
+            "id": "paper_1791986062886_ve91_e1",
+            "name": "GRAG",
+            "type": "Method",
+            "description": "Graph Retrieval-Augmented Generation framework integrating graph retrieval with LLMs."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e4",
+        "type": "PROPOSES",
+        "weight": 0.95,
+        "is_bridge": false
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e3",
+        "type": "INTEGRATES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e4",
+        "target": "paper_1791986062886_ve91_e5",
+        "type": "UTILIZES",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e4",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "RETRIEVES",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e5",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "APPROXIMATES",
+        "weight": 0.8,
+        "is_bridge": false
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e7",
+        "type": "FEEDS_INTO",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e8",
+        "type": "FEEDS_INTO",
+        "weight": 0.92,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e8",
+        "target": "paper_1791986062886_ve91_e9",
+        "type": "GENERATED_BY",
+        "weight": 0.87,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e9",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "ENCODES",
+        "weight": 0.84,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e7",
+        "target": "paper_1791986062886_ve91_e10",
+        "type": "GENERATED_BY",
+        "weight": 0.86,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e10",
+        "target": "paper_1791986062886_ve91_e6",
+        "type": "TRANSFORMS",
+        "weight": 0.83,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791986062886_ve91_e3",
+        "target": "paper_1791986062886_ve91_e11",
+        "type": "PERFORMS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e3",
+        "target": "paper_1791986062886_ve91_e12",
+        "type": "EVALUATED_ON",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e12",
+        "type": "EVALUATED_ON",
+        "weight": 0.93,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e15",
+        "type": "OUTPERFORMS",
+        "weight": 0.91,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791986062886_ve91_e15",
+        "target": "paper_1791986062886_ve91_e16",
+        "type": "OUTPERFORMS",
+        "weight": 0.89,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e13",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "scc_cluster_14_paper_17",
+        "target": "paper_1791986062886_ve91_e14",
+        "type": "OPTIMIZES_METRIC",
+        "weight": 0.88,
+        "is_bridge": true
+      }
+    ],
+    "node_count": 15,
+    "edge_count": 18,
+    "articulation_points": [
+      "paper_1791986062886_ve91_e3",
+      "paper_1791986062886_ve91_e15",
+      "paper_1791986062886_ve91_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791986062886_ve91_e3",
+        "paper_1791986062886_ve91_e11"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e2"
+      ],
+      [
+        "paper_1791986062886_ve91_e15",
+        "paper_1791986062886_ve91_e16"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e15"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e13"
+      ],
+      [
+        "paper_1791986062886_ve91_e1",
+        "paper_1791986062886_ve91_e14"
+      ]
+    ],
+    "compression_ratio": 0.938,
+    "diagnostics": {
+      "total_nodes": 16,
+      "num_sccs": 15,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "max_scc_size": 2,
+      "max_scc_ratio": 0.125,
+      "has_giant_scc": false
+    }
+  }
+}

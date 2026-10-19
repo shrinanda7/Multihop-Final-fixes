@@ -1,0 +1,6 @@
+{
+  "name": "Research Paper GraphRAG",
+  "description": "Knowledge-graph RAG system for research papers featuring Tarjan-based compression, bridge-aware pruning, and budget-aware traversal.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

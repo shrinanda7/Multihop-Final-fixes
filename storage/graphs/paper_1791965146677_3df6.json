@@ -1,0 +1,735 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791965146677_3df6_e1",
+        "name": "RFMiD Dataset",
+        "type": "Dataset",
+        "description": "Retinal Fundus Multi-Disease Image Dataset containing 3,200 fundus images annotated with 46 ocular conditions"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e2",
+        "name": "Retinal Fundus Images",
+        "type": "Concept",
+        "description": "Color fundus photographs used for ocular disease analysis"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e3",
+        "name": "Multi-Label Classification",
+        "type": "Task",
+        "description": "Predicting multiple disease labels per fundus image"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e4",
+        "name": "Rare Pathology Detection",
+        "type": "Task",
+        "description": "Identifying low‑prevalence ocular diseases such as CRAO and AION"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e5",
+        "name": "Ocular Disease Classification",
+        "type": "Task",
+        "description": "General classification of common and rare eye diseases from fundus images"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e6",
+        "name": "Color Fundus Photography",
+        "type": "Concept",
+        "description": "Imaging modality capturing the retina in color"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e7",
+        "name": "Diabetic Retinopathy",
+        "type": "Concept",
+        "description": "A frequent retinal disease often represented in fundus datasets"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e8",
+        "name": "Glaucoma",
+        "type": "Concept",
+        "description": "A sight‑threatening optic neuropathy"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e9",
+        "name": "Age‑Related Macular Degeneration",
+        "type": "Concept",
+        "description": "Degenerative disease affecting the macula"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e10",
+        "name": "Central Retinal Artery Occlusion",
+        "type": "Concept",
+        "description": "Rare acute vascular occlusion of the retina"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e11",
+        "name": "Anterior Ischemic Optic Neuropathy",
+        "type": "Concept",
+        "description": "Rare optic nerve ischemia"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e12",
+        "name": "ISBI‑2021 Challenge",
+        "type": "Concept",
+        "description": "IEEE ISBI 2021 challenge that hosted the RFMiD dataset"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e13",
+        "name": "AUROC",
+        "type": "Metric",
+        "description": "Area under the ROC curve, measuring classification discrimination"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e14",
+        "name": "AUPRC",
+        "type": "Metric",
+        "description": "Area under the precision‑recall curve, useful for imbalanced data"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e15",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Overall proportion of correctly classified samples"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e16",
+        "name": "ResNet‑50",
+        "type": "Architecture",
+        "description": "Residual convolutional network commonly used as a baseline for fundus image classification"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e17",
+        "name": "EfficientNet‑B3",
+        "type": "Architecture",
+        "description": "Compound‑scaled CNN architecture used as a strong baseline"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e18",
+        "name": "Transfer Learning",
+        "type": "Method",
+        "description": "Pre‑training on large image corpora and fine‑tuning on RFMiD"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e19",
+        "name": "Cross‑Entropy Loss",
+        "type": "Concept",
+        "description": "Standard loss for multi‑label classification"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e20",
+        "name": "Multi‑Task Learning",
+        "type": "Theory",
+        "description": "Learning shared representations for multiple related disease detection tasks"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e3",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e4",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e5",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e5",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e5",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e15",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e15",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e2",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e8",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e9",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e10",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e11",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e12",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e16",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e17",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e18",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e19",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e20",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e17",
+        "target": "paper_1791965146677_3df6_e16",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 25,
+    "articulation_points": [
+      "paper_1791965146677_3df6_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e2"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e6"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e7"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e8"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e9"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e10"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e11"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e12"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e18"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e19"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e20"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791965146677_3df6_e13",
+        "name": "AUROC",
+        "type": "Metric",
+        "description": "Area under the ROC curve, measuring classification discrimination"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e14",
+        "name": "AUPRC",
+        "type": "Metric",
+        "description": "Area under the precision‑recall curve, useful for imbalanced data"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e15",
+        "name": "Accuracy",
+        "type": "Metric",
+        "description": "Overall proportion of correctly classified samples"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e3",
+        "name": "Multi-Label Classification",
+        "type": "Task",
+        "description": "Predicting multiple disease labels per fundus image"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e4",
+        "name": "Rare Pathology Detection",
+        "type": "Task",
+        "description": "Identifying low‑prevalence ocular diseases such as CRAO and AION"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e5",
+        "name": "Ocular Disease Classification",
+        "type": "Task",
+        "description": "General classification of common and rare eye diseases from fundus images"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e2",
+        "name": "Retinal Fundus Images",
+        "type": "Concept",
+        "description": "Color fundus photographs used for ocular disease analysis"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e6",
+        "name": "Color Fundus Photography",
+        "type": "Concept",
+        "description": "Imaging modality capturing the retina in color"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e7",
+        "name": "Diabetic Retinopathy",
+        "type": "Concept",
+        "description": "A frequent retinal disease often represented in fundus datasets"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e8",
+        "name": "Glaucoma",
+        "type": "Concept",
+        "description": "A sight‑threatening optic neuropathy"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e9",
+        "name": "Age‑Related Macular Degeneration",
+        "type": "Concept",
+        "description": "Degenerative disease affecting the macula"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e10",
+        "name": "Central Retinal Artery Occlusion",
+        "type": "Concept",
+        "description": "Rare acute vascular occlusion of the retina"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e11",
+        "name": "Anterior Ischemic Optic Neuropathy",
+        "type": "Concept",
+        "description": "Rare optic nerve ischemia"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e12",
+        "name": "ISBI‑2021 Challenge",
+        "type": "Concept",
+        "description": "IEEE ISBI 2021 challenge that hosted the RFMiD dataset"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e16",
+        "name": "ResNet‑50",
+        "type": "Architecture",
+        "description": "Residual convolutional network commonly used as a baseline for fundus image classification"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e17",
+        "name": "EfficientNet‑B3",
+        "type": "Architecture",
+        "description": "Compound‑scaled CNN architecture used as a strong baseline"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e18",
+        "name": "Transfer Learning",
+        "type": "Method",
+        "description": "Pre‑training on large image corpora and fine‑tuning on RFMiD"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e19",
+        "name": "Cross‑Entropy Loss",
+        "type": "Concept",
+        "description": "Standard loss for multi‑label classification"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e20",
+        "name": "Multi‑Task Learning",
+        "type": "Theory",
+        "description": "Learning shared representations for multiple related disease detection tasks"
+      },
+      {
+        "id": "paper_1791965146677_3df6_e1",
+        "name": "RFMiD Dataset",
+        "type": "Dataset",
+        "description": "Retinal Fundus Multi-Disease Image Dataset containing 3,200 fundus images annotated with 46 ocular conditions",
+        "is_connector": true
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e3",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e4",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e5",
+        "type": "PROVIDES_DATA_FOR",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e5",
+        "target": "paper_1791965146677_3df6_e13",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e5",
+        "target": "paper_1791965146677_3df6_e14",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e3",
+        "target": "paper_1791965146677_3df6_e15",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e4",
+        "target": "paper_1791965146677_3df6_e15",
+        "type": "EVALUATED_WITH",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e2",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e6",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e7",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e8",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e9",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e10",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e11",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e12",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e16",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e17",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e18",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e19",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e1",
+        "target": "paper_1791965146677_3df6_e20",
+        "type": "CONTAINS",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965146677_3df6_e17",
+        "target": "paper_1791965146677_3df6_e16",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 25,
+    "articulation_points": [
+      "paper_1791965146677_3df6_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e2"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e6"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e7"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e8"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e9"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e10"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e11"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e12"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e18"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e19"
+      ],
+      [
+        "paper_1791965146677_3df6_e1",
+        "paper_1791965146677_3df6_e20"
+      ]
+    ],
+    "compression_ratio": 1,
+    "diagnostics": {
+      "total_nodes": 20,
+      "num_sccs": 20,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_scc_size": 1,
+      "max_scc_ratio": 0.05,
+      "has_giant_scc": false
+    }
+  }
+}

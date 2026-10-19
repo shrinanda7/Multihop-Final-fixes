@@ -1,0 +1,553 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791965182835_ffka_e1",
+        "name": "Convolutional Neural Network",
+        "type": "Architecture",
+        "description": "Deep learning architecture widely used for medical image analysis"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e2",
+        "name": "Deep Neural Network",
+        "type": "Architecture",
+        "description": "Generic multilayer perceptron architecture for image tasks"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e3",
+        "name": "Representation Learning",
+        "type": "Method",
+        "description": "Learning robust feature embeddings from limited medical data"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e4",
+        "name": "Data Augmentation",
+        "type": "Method",
+        "description": "Synthetic expansion of medical image datasets using transformations"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e5",
+        "name": "Denoising Preprocessing",
+        "type": "Method",
+        "description": "Manual removal of noise and artefacts from MRI/CT/X‑ray images"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e6",
+        "name": "MRI Scan Dataset",
+        "type": "Dataset",
+        "description": "Collection of magnetic resonance images often containing motion artefacts"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e7",
+        "name": "CT Scan Dataset",
+        "type": "Dataset",
+        "description": "Collection of computed tomography images with ring, beam‑hardening and metal artefacts"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e8",
+        "name": "X‑ray Image Dataset",
+        "type": "Dataset",
+        "description": "Large set of radiographic images affected by Gaussian, Poisson and speckle noise"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e9",
+        "name": "Diagnostic Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correctly identified pathologies"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e10",
+        "name": "Robustness to Adversarial Attacks",
+        "type": "Metric",
+        "description": "Measure of model resilience against malicious perturbations"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e11",
+        "name": "Adversarial Attack",
+        "type": "Concept",
+        "description": "Deliberate perturbations that cause misclassification in deep models"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e12",
+        "name": "Data Imbalance",
+        "type": "Concept",
+        "description": "Unequal class distribution leading to biased predictions"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e13",
+        "name": "Patient Trust",
+        "type": "Concept",
+        "description": "Confidence of patients in AI‑driven diagnostic tools"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e14",
+        "name": "HIPAA Compliance",
+        "type": "Concept",
+        "description": "Legal framework ensuring privacy of health information"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e15",
+        "name": "CAD System",
+        "type": "Task",
+        "description": "Computer‑aided diagnostic system for medical image interpretation"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e16",
+        "name": "Medical Image Analysis",
+        "type": "Task",
+        "description": "Comprehensive task of detecting diseases from medical imaging"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e3",
+        "type": "USES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e6",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e7",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e8",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e9",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e10",
+        "type": "EVALUATED_ON",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e3",
+        "target": "paper_1791965182835_ffka_e2",
+        "type": "IMPROVES_UPON",
+        "weight": 0.88,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e4",
+        "target": "paper_1791965182835_ffka_e6",
+        "type": "AUGMENTS",
+        "weight": 0.75,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e4",
+        "target": "paper_1791965182835_ffka_e7",
+        "type": "AUGMENTS",
+        "weight": 0.75,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e4",
+        "target": "paper_1791965182835_ffka_e8",
+        "type": "AUGMENTS",
+        "weight": 0.75,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e5",
+        "target": "paper_1791965182835_ffka_e6",
+        "type": "PREPROCESSES",
+        "weight": 0.7,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e5",
+        "target": "paper_1791965182835_ffka_e7",
+        "type": "PREPROCESSES",
+        "weight": 0.7,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e5",
+        "target": "paper_1791965182835_ffka_e8",
+        "type": "PREPROCESSES",
+        "weight": 0.7,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e5",
+        "target": "paper_1791965182835_ffka_e1",
+        "type": "FEEDS_INTO",
+        "weight": 0.8,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e1",
+        "target": "paper_1791965182835_ffka_e5",
+        "type": "FEEDS_INTO",
+        "weight": 0.4,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e11",
+        "target": "paper_1791965182835_ffka_e1",
+        "type": "TARGETS",
+        "weight": 0.6,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e10",
+        "target": "paper_1791965182835_ffka_e1",
+        "type": "MEASURES_RESILIENCE_OF",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e12",
+        "target": "paper_1791965182835_ffka_e2",
+        "type": "CAUSES_BIAS_IN",
+        "weight": 0.65,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e13",
+        "target": "paper_1791965182835_ffka_e15",
+        "type": "TRUSTS",
+        "weight": 0.5,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e14",
+        "target": "paper_1791965182835_ffka_e15",
+        "type": "REGULATES",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e15",
+        "target": "paper_1791965182835_ffka_e16",
+        "type": "PERFORMS",
+        "weight": 0.95,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e16",
+        "target": "paper_1791965182835_ffka_e1",
+        "type": "REQUIRES",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e6",
+        "target": "paper_1791965182835_ffka_e11",
+        "type": "CONTAINS",
+        "weight": 0.5,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e7",
+        "target": "paper_1791965182835_ffka_e11",
+        "type": "CONTAINS",
+        "weight": 0.5,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e8",
+        "target": "paper_1791965182835_ffka_e11",
+        "type": "CONTAINS",
+        "weight": 0.5,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e2",
+        "target": "paper_1791965182835_ffka_e1",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 16,
+    "edge_count": 26,
+    "articulation_points": [
+      "paper_1791965182835_ffka_e2",
+      "paper_1791965182835_ffka_e15",
+      "paper_1791965182835_ffka_e16",
+      "paper_1791965182835_ffka_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791965182835_ffka_e2",
+        "paper_1791965182835_ffka_e12"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e9"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e10"
+      ],
+      [
+        "paper_1791965182835_ffka_e15",
+        "paper_1791965182835_ffka_e13"
+      ],
+      [
+        "paper_1791965182835_ffka_e15",
+        "paper_1791965182835_ffka_e14"
+      ],
+      [
+        "paper_1791965182835_ffka_e16",
+        "paper_1791965182835_ffka_e15"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e16"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791965182835_ffka_e9",
+        "name": "Diagnostic Accuracy",
+        "type": "Metric",
+        "description": "Proportion of correctly identified pathologies"
+      },
+      {
+        "id": "scc_cluster_1_paper_17",
+        "name": "SCC [Denoising Cyclic Loop]",
+        "type": "Supernode",
+        "description": "Contracted quotient supernode containing 9 cyclically interdependent components: Denoising Preprocessing, Robustness to Adversarial Attacks, X‑ray Image Dataset, CT Scan Dataset, Adversarial Attack, MRI Scan Dataset, Deep Neural Network, Representation Learning, Convolutional Neural Network.",
+        "is_supernode": true,
+        "member_count": 9,
+        "member_node_ids": [
+          "paper_1791965182835_ffka_e5",
+          "paper_1791965182835_ffka_e10",
+          "paper_1791965182835_ffka_e8",
+          "paper_1791965182835_ffka_e7",
+          "paper_1791965182835_ffka_e11",
+          "paper_1791965182835_ffka_e6",
+          "paper_1791965182835_ffka_e2",
+          "paper_1791965182835_ffka_e3",
+          "paper_1791965182835_ffka_e1"
+        ],
+        "member_nodes": [
+          {
+            "id": "paper_1791965182835_ffka_e5",
+            "name": "Denoising Preprocessing",
+            "type": "Method",
+            "description": "Manual removal of noise and artefacts from MRI/CT/X‑ray images"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e10",
+            "name": "Robustness to Adversarial Attacks",
+            "type": "Metric",
+            "description": "Measure of model resilience against malicious perturbations"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e8",
+            "name": "X‑ray Image Dataset",
+            "type": "Dataset",
+            "description": "Large set of radiographic images affected by Gaussian, Poisson and speckle noise"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e7",
+            "name": "CT Scan Dataset",
+            "type": "Dataset",
+            "description": "Collection of computed tomography images with ring, beam‑hardening and metal artefacts"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e11",
+            "name": "Adversarial Attack",
+            "type": "Concept",
+            "description": "Deliberate perturbations that cause misclassification in deep models"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e6",
+            "name": "MRI Scan Dataset",
+            "type": "Dataset",
+            "description": "Collection of magnetic resonance images often containing motion artefacts"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e2",
+            "name": "Deep Neural Network",
+            "type": "Architecture",
+            "description": "Generic multilayer perceptron architecture for image tasks"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e3",
+            "name": "Representation Learning",
+            "type": "Method",
+            "description": "Learning robust feature embeddings from limited medical data"
+          },
+          {
+            "id": "paper_1791965182835_ffka_e1",
+            "name": "Convolutional Neural Network",
+            "type": "Architecture",
+            "description": "Deep learning architecture widely used for medical image analysis"
+          }
+        ]
+      },
+      {
+        "id": "paper_1791965182835_ffka_e4",
+        "name": "Data Augmentation",
+        "type": "Method",
+        "description": "Synthetic expansion of medical image datasets using transformations"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e12",
+        "name": "Data Imbalance",
+        "type": "Concept",
+        "description": "Unequal class distribution leading to biased predictions"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e16",
+        "name": "Medical Image Analysis",
+        "type": "Task",
+        "description": "Comprehensive task of detecting diseases from medical imaging",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791965182835_ffka_e15",
+        "name": "CAD System",
+        "type": "Task",
+        "description": "Computer‑aided diagnostic system for medical image interpretation",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791965182835_ffka_e13",
+        "name": "Patient Trust",
+        "type": "Concept",
+        "description": "Confidence of patients in AI‑driven diagnostic tools"
+      },
+      {
+        "id": "paper_1791965182835_ffka_e14",
+        "name": "HIPAA Compliance",
+        "type": "Concept",
+        "description": "Legal framework ensuring privacy of health information"
+      }
+    ],
+    "edges": [
+      {
+        "source": "scc_cluster_1_paper_17",
+        "target": "paper_1791965182835_ffka_e9",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e4",
+        "target": "scc_cluster_1_paper_17",
+        "type": "AUGMENTS",
+        "weight": 0.75,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791965182835_ffka_e12",
+        "target": "scc_cluster_1_paper_17",
+        "type": "CAUSES_BIAS_IN",
+        "weight": 0.65,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e13",
+        "target": "paper_1791965182835_ffka_e15",
+        "type": "TRUSTS",
+        "weight": 0.5,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e14",
+        "target": "paper_1791965182835_ffka_e15",
+        "type": "REGULATES",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e15",
+        "target": "paper_1791965182835_ffka_e16",
+        "type": "PERFORMS",
+        "weight": 0.95,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791965182835_ffka_e16",
+        "target": "scc_cluster_1_paper_17",
+        "type": "REQUIRES",
+        "weight": 0.9,
+        "is_bridge": true
+      }
+    ],
+    "node_count": 8,
+    "edge_count": 7,
+    "articulation_points": [
+      "paper_1791965182835_ffka_e2",
+      "paper_1791965182835_ffka_e15",
+      "paper_1791965182835_ffka_e16",
+      "paper_1791965182835_ffka_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791965182835_ffka_e2",
+        "paper_1791965182835_ffka_e12"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e9"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e10"
+      ],
+      [
+        "paper_1791965182835_ffka_e15",
+        "paper_1791965182835_ffka_e13"
+      ],
+      [
+        "paper_1791965182835_ffka_e15",
+        "paper_1791965182835_ffka_e14"
+      ],
+      [
+        "paper_1791965182835_ffka_e16",
+        "paper_1791965182835_ffka_e15"
+      ],
+      [
+        "paper_1791965182835_ffka_e1",
+        "paper_1791965182835_ffka_e16"
+      ]
+    ],
+    "compression_ratio": 0.5,
+    "diagnostics": {
+      "total_nodes": 16,
+      "num_sccs": 8,
+      "scc_sizes": [
+        1,
+        9,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_scc_size": 9,
+      "max_scc_ratio": 0.563,
+      "has_giant_scc": true
+    }
+  }
+}

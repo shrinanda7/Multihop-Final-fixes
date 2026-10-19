@@ -1,0 +1,706 @@
+{
+  "original_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791987308849_lqpj_e1",
+        "name": "MultiHop-RAG",
+        "type": "Dataset",
+        "description": "A benchmark dataset of multi-hop queries, evidence, and answers built on a news article knowledge base"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e2",
+        "name": "Retrieval-Augmented Generation (RAG)",
+        "type": "Method",
+        "description": "Framework that retrieves external knowledge to augment large language model generation"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e3",
+        "name": "Large Language Model (LLM)",
+        "type": "Concept",
+        "description": "Neural language models such as GPT‑4, PaLM, Llama2 used for generation"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e4",
+        "name": "GPT-4",
+        "type": "Architecture",
+        "description": "State‑of‑the‑art large language model evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e5",
+        "name": "PaLM",
+        "type": "Architecture",
+        "description": "Google's large language model evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e6",
+        "name": "Llama2-70B",
+        "type": "Architecture",
+        "description": "Meta's 70‑billion parameter LLM evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e7",
+        "name": "Embedding Model",
+        "type": "Method",
+        "description": "Vector embedding technique used to retrieve evidence for multi‑hop queries"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e8",
+        "name": "Multi‑hop Query",
+        "type": "Task",
+        "description": "Retrieval and reasoning task that requires evidence from multiple documents"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e9",
+        "name": "Inference Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks for inferred relationships"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e10",
+        "name": "Comparison Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks to compare data points across sources"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e11",
+        "name": "Temporal Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks about event ordering over time"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e12",
+        "name": "Null Query",
+        "type": "Task",
+        "description": "A multi‑hop query where no answer exists in the knowledge base"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e13",
+        "name": "Knowledge Base",
+        "type": "Concept",
+        "description": "External collection of documents (news articles) used by RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e14",
+        "name": "News Article Collection",
+        "type": "Dataset",
+        "description": "English news articles that constitute the underlying knowledge base"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e15",
+        "name": "RGB Benchmark",
+        "type": "Method",
+        "description": "Existing RAG benchmark focusing on single‑hop retrieval"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e16",
+        "name": "RECALL Benchmark",
+        "type": "Method",
+        "description": "Existing RAG benchmark focusing on single‑hop retrieval"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e17",
+        "name": "LlamaIndex",
+        "type": "Method",
+        "description": "Framework that implements RAG pipelines"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e18",
+        "name": "LangChain",
+        "type": "Method",
+        "description": "Framework that implements RAG pipelines"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e19",
+        "name": "Retrieval Accuracy",
+        "type": "Metric",
+        "description": "Metric measuring how well relevant evidence is retrieved"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e20",
+        "name": "Hallucination Rate",
+        "type": "Metric",
+        "description": "Metric measuring the frequency of fabricated answers"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e13",
+        "type": "USES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e3",
+        "type": "AUGMENTS",
+        "weight": 0.95,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e1",
+        "target": "paper_1791987308849_lqpj_e14",
+        "type": "CONTAINS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e1",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "PROVIDES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e8",
+        "target": "paper_1791987308849_lqpj_e13",
+        "type": "REQUIRES",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e9",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e10",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e11",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e12",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e7",
+        "target": "paper_1791987308849_lqpj_e14",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e4",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e5",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e6",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.87,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e15",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.75,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e16",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.74,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e19",
+        "type": "IMPROVES_UPON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e20",
+        "type": "REDUCES",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e17",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "IMPLEMENTS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e18",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "IMPLEMENTS",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e4",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791987308849_lqpj_e14",
+      "paper_1791987308849_lqpj_e2",
+      "paper_1791987308849_lqpj_e8",
+      "paper_1791987308849_lqpj_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791987308849_lqpj_e14",
+        "paper_1791987308849_lqpj_e7"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e14"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e3"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e19"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e20"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e17"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e18"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e9"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e10"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e11"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e12"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e5"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e6"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e15"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e16"
+      ]
+    ]
+  },
+  "compressed_graph": {
+    "nodes": [
+      {
+        "id": "paper_1791987308849_lqpj_e14",
+        "name": "News Article Collection",
+        "type": "Dataset",
+        "description": "English news articles that constitute the underlying knowledge base",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e13",
+        "name": "Knowledge Base",
+        "type": "Concept",
+        "description": "External collection of documents (news articles) used by RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e8",
+        "name": "Multi‑hop Query",
+        "type": "Task",
+        "description": "Retrieval and reasoning task that requires evidence from multiple documents",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e1",
+        "name": "MultiHop-RAG",
+        "type": "Dataset",
+        "description": "A benchmark dataset of multi-hop queries, evidence, and answers built on a news article knowledge base",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e3",
+        "name": "Large Language Model (LLM)",
+        "type": "Concept",
+        "description": "Neural language models such as GPT‑4, PaLM, Llama2 used for generation"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e19",
+        "name": "Retrieval Accuracy",
+        "type": "Metric",
+        "description": "Metric measuring how well relevant evidence is retrieved"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e20",
+        "name": "Hallucination Rate",
+        "type": "Metric",
+        "description": "Metric measuring the frequency of fabricated answers"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e2",
+        "name": "Retrieval-Augmented Generation (RAG)",
+        "type": "Method",
+        "description": "Framework that retrieves external knowledge to augment large language model generation",
+        "is_connector": true
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e4",
+        "name": "GPT-4",
+        "type": "Architecture",
+        "description": "State‑of‑the‑art large language model evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e5",
+        "name": "PaLM",
+        "type": "Architecture",
+        "description": "Google's large language model evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e6",
+        "name": "Llama2-70B",
+        "type": "Architecture",
+        "description": "Meta's 70‑billion parameter LLM evaluated on MultiHop‑RAG"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e7",
+        "name": "Embedding Model",
+        "type": "Method",
+        "description": "Vector embedding technique used to retrieve evidence for multi‑hop queries"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e9",
+        "name": "Inference Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks for inferred relationships"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e10",
+        "name": "Comparison Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks to compare data points across sources"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e11",
+        "name": "Temporal Query",
+        "type": "Task",
+        "description": "A multi‑hop query type that asks about event ordering over time"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e12",
+        "name": "Null Query",
+        "type": "Task",
+        "description": "A multi‑hop query where no answer exists in the knowledge base"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e15",
+        "name": "RGB Benchmark",
+        "type": "Method",
+        "description": "Existing RAG benchmark focusing on single‑hop retrieval"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e16",
+        "name": "RECALL Benchmark",
+        "type": "Method",
+        "description": "Existing RAG benchmark focusing on single‑hop retrieval"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e17",
+        "name": "LlamaIndex",
+        "type": "Method",
+        "description": "Framework that implements RAG pipelines"
+      },
+      {
+        "id": "paper_1791987308849_lqpj_e18",
+        "name": "LangChain",
+        "type": "Method",
+        "description": "Framework that implements RAG pipelines"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e13",
+        "type": "USES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e3",
+        "type": "AUGMENTS",
+        "weight": 0.95,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e1",
+        "target": "paper_1791987308849_lqpj_e14",
+        "type": "CONTAINS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e1",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "PROVIDES",
+        "weight": 0.9,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e8",
+        "target": "paper_1791987308849_lqpj_e13",
+        "type": "REQUIRES",
+        "weight": 0.85,
+        "is_bridge": false
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e9",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e10",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e11",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e12",
+        "target": "paper_1791987308849_lqpj_e8",
+        "type": "SUBTASK_OF",
+        "weight": 0.8,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e7",
+        "target": "paper_1791987308849_lqpj_e14",
+        "type": "TRAINED_ON",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e4",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e5",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e6",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.87,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e15",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.75,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e16",
+        "target": "paper_1791987308849_lqpj_e1",
+        "type": "EVALUATED_ON",
+        "weight": 0.74,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e19",
+        "type": "IMPROVES_UPON",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e2",
+        "target": "paper_1791987308849_lqpj_e20",
+        "type": "REDUCES",
+        "weight": 0.85,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e17",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "IMPLEMENTS",
+        "weight": 0.9,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e18",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "IMPLEMENTS",
+        "weight": 0.88,
+        "is_bridge": true
+      },
+      {
+        "source": "paper_1791987308849_lqpj_e4",
+        "target": "paper_1791987308849_lqpj_e2",
+        "type": "FEEDBACK_LOOP",
+        "weight": 0.88
+      }
+    ],
+    "node_count": 20,
+    "edge_count": 20,
+    "articulation_points": [
+      "paper_1791987308849_lqpj_e14",
+      "paper_1791987308849_lqpj_e2",
+      "paper_1791987308849_lqpj_e8",
+      "paper_1791987308849_lqpj_e1"
+    ],
+    "bridges": [
+      [
+        "paper_1791987308849_lqpj_e14",
+        "paper_1791987308849_lqpj_e7"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e14"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e3"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e19"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e20"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e17"
+      ],
+      [
+        "paper_1791987308849_lqpj_e2",
+        "paper_1791987308849_lqpj_e18"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e9"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e10"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e11"
+      ],
+      [
+        "paper_1791987308849_lqpj_e8",
+        "paper_1791987308849_lqpj_e12"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e5"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e6"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e15"
+      ],
+      [
+        "paper_1791987308849_lqpj_e1",
+        "paper_1791987308849_lqpj_e16"
+      ]
+    ],
+    "compression_ratio": 1,
+    "diagnostics": {
+      "total_nodes": 20,
+      "num_sccs": 20,
+      "scc_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max_scc_size": 1,
+      "max_scc_ratio": 0.05,
+      "has_giant_scc": false
+    }
+  }
+}

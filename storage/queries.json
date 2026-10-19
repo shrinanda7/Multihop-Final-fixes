@@ -1,0 +1,1061 @@
+[
+  {
+    "id": "q_1791910094129",
+    "timestamp": "2026-10-13T16:48:14.129Z",
+    "paper_ids": [
+      "paper_1791909823771_iqck"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age Related"
+    ],
+    "question": "exact results of f1 score",
+    "mode": "ours",
+    "answer_preview": "Fundus Image Analysis for Age Related Retinal Disease Detection Using Deep Learning and XAI Methods Umadevi V Professor Department of Computer Science",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791910080172",
+    "timestamp": "2026-10-13T16:48:00.172Z",
+    "paper_ids": [
+      "paper_1791909823771_iqck"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age Related"
+    ],
+    "question": "exact results of accuracy",
+    "mode": "ours",
+    "answer_preview": "Fundus Image Analysis for Age Related Retinal Disease Detection Using Deep Learning and XAI Methods Umadevi V Professor Department of Computer Science",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791910047924",
+    "timestamp": "2026-10-13T16:47:27.924Z",
+    "paper_ids": [
+      "paper_1791909823771_iqck"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age Related"
+    ],
+    "question": "what is the evaluation results of this paper and explain different metrics used",
+    "mode": "ours",
+    "answer_preview": "Model Input Size Architecture Type Parameters ResNet34 224 × 224 Residual (skip connections) ~21.8M VGG19 224 × 224 Deep sequential conv layers 143.7M",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791909981337",
+    "timestamp": "2026-10-13T16:46:21.337Z",
+    "paper_ids": [
+      "paper_1791909823771_iqck"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age Related"
+    ],
+    "question": "different xai methods use in this paper",
+    "mode": "ours",
+    "answer_preview": "Fundus Image Analysis for Age Related Retinal Disease Detection Using Deep Learning and XAI Methods Umadevi V Professor Department of Computer Science",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791909767788",
+    "timestamp": "2026-10-13T16:42:47.788Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1"
+    ],
+    "paper_titles": [
+      "Data Descriptor"
+    ],
+    "question": "explain different diseases covered in this dataset",
+    "mode": "ours",
+    "answer_preview": "data Data Descriptor Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research Samiksha Pachade 1,* , Prasann",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791909717383",
+    "timestamp": "2026-10-13T16:41:57.383Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "explain the evaluation results of this paper",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791909678034",
+    "timestamp": "2026-10-13T16:41:18.034Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "cann u explain the entire paper once?",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791909609479",
+    "timestamp": "2026-10-13T16:40:09.479Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "what are different xai methods used in this paper",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791909364560",
+    "timestamp": "2026-10-13T16:36:04.560Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1"
+    ],
+    "paper_titles": [
+      "Data Descriptor"
+    ],
+    "question": "what is this dataset about",
+    "mode": "ours",
+    "answer_preview": "data Data Descriptor Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research Samiksha Pachade 1,* , Prasann",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791908082370",
+    "timestamp": "2026-10-13T16:14:42.370Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791900017773",
+    "timestamp": "2026-10-13T14:00:17.773Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "which dataset is used in the paper",
+    "mode": "ours",
+    "answer_preview": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art mode",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791899958342",
+    "timestamp": "2026-10-13T13:59:18.342Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "which dataset is used in the paper",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791899411940",
+    "timestamp": "2026-10-13T13:50:11.940Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894527630",
+    "timestamp": "2026-10-13T12:28:47.630Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the attention mechanism in Transformer?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894394726",
+    "timestamp": "2026-10-13T12:26:34.726Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894351378",
+    "timestamp": "2026-10-13T12:25:51.378Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894313407",
+    "timestamp": "2026-10-13T12:25:13.407Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894173829",
+    "timestamp": "2026-10-13T12:22:53.829Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894154050",
+    "timestamp": "2026-10-13T12:22:34.050Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894138873",
+    "timestamp": "2026-10-13T12:22:18.873Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791894060463",
+    "timestamp": "2026-10-13T12:21:00.463Z",
+    "paper_ids": [
+      "paper-attention-2017"
+    ],
+    "paper_titles": [],
+    "question": "Explain multi-head attention",
+    "mode": "ours",
+    "answer_preview": "Explain multi-head attention",
+    "latency_ms": 280,
+    "tokens": 600
+  },
+  {
+    "id": "q_1791890734831",
+    "timestamp": "2026-10-13T11:25:34.831Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain the multi-head self-attention mechanism and scaled dot-product formulation.",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791890669663",
+    "timestamp": "2026-10-13T11:24:29.663Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791890609176",
+    "timestamp": "2026-10-13T11:23:29.176Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain the multi-head self-attention mechanism and scaled dot-product formulation.",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791890525896",
+    "timestamp": "2026-10-13T11:22:05.896Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What were the BLEU score results on WMT 2014 English-to-German?",
+    "mode": "ours",
+    "answer_preview": "Table 2: The Transformer achieves better BLEU scores than previous state-of-the-art models on the English-to-German and English-to-French newstest2014",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791890487709",
+    "timestamp": "2026-10-13T11:21:27.709Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791889100686",
+    "timestamp": "2026-10-13T10:58:20.686Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1"
+    ],
+    "paper_titles": [
+      "Data Descriptor"
+    ],
+    "question": "dataset about?",
+    "mode": "ours",
+    "answer_preview": "data Data Descriptor Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research Samiksha Pachade 1,* , Prasann",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888828760",
+    "timestamp": "2026-10-13T10:53:48.760Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1"
+    ],
+    "paper_titles": [
+      "Data Descriptor"
+    ],
+    "question": "dataset details",
+    "mode": "ours",
+    "answer_preview": "Data 2021, 6, 14 3 of 14 2. Data Description The RFMiD is a new publicly available retinal images dataset consisting of 3200 images along with the exp",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888795087",
+    "timestamp": "2026-10-13T10:53:15.087Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1"
+    ],
+    "paper_titles": [
+      "Data Descriptor"
+    ],
+    "question": "what is the dataset about ?",
+    "mode": "ours",
+    "answer_preview": "data Data Descriptor Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research Samiksha Pachade 1,* , Prasann",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888211656",
+    "timestamp": "2026-10-13T10:43:31.656Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888168251",
+    "timestamp": "2026-10-13T10:42:48.251Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the main contribution of this paper?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888114911",
+    "timestamp": "2026-10-13T10:41:54.911Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888077561",
+    "timestamp": "2026-10-13T10:41:17.561Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the main contribution of this paper?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791888026489",
+    "timestamp": "2026-10-13T10:40:26.489Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1789927908284_fpzm",
+      "paper_1791877987234_k4vu",
+      "paper_1791887786708_2iat"
+    ],
+    "paper_titles": [
+      "Unlocking the Potential of Deep Learning in",
+      "Received April 28, 2022, accepted May 19, 2022, date of publication May 27, 2022, date of current version June 6, 2022.",
+      "paper3",
+      "Attention Is All You Need"
+    ],
+    "question": "What is the main contribution of this paper?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791887641108",
+    "timestamp": "2026-10-13T10:34:01.108Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1791887533965_y4j1",
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Data Descriptor",
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods",
+      "Attention Is All You Need"
+    ],
+    "question": "How these two papers are related",
+    "mode": "ours",
+    "answer_preview": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art mode",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791887613651",
+    "timestamp": "2026-10-13T10:33:33.651Z",
+    "paper_ids": [
+      "paper_1791887533965_y4j1",
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Data Descriptor",
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "How many papers are selected in the source .,,,,, adn how these two papers are realted to each other",
+    "mode": "ours",
+    "answer_preview": "data Data Descriptor Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research Samiksha Pachade 1,* , Prasann",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791887275014",
+    "timestamp": "2026-10-13T10:27:55.014Z",
+    "paper_ids": [
+      "paper_1791885807281_f0wo"
+    ],
+    "paper_titles": [
+      "Computational and Structural Biotechnology Reports 2 (2025) 100035"
+    ],
+    "question": "What hardware was used for real-time inference and what datasets were evaluated?",
+    "mode": "ours",
+    "answer_preview": "Computational and Structural Biotechnology Reports 2 (2025) 100035 2 constraints therefore remains a permanent challenge. In this study, we implement ",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791886921013",
+    "timestamp": "2026-10-13T10:22:01.013Z",
+    "paper_ids": [
+      "paper_1791885807281_f0wo"
+    ],
+    "paper_titles": [
+      "Computational and Structural Biotechnology Reports 2 (2025) 100035"
+    ],
+    "question": "What hardware was used for real-time inference and what datasets were evaluated?",
+    "mode": "ours",
+    "answer_preview": "Computational and Structural Biotechnology Reports 2 (2025) 100035 2 constraints therefore remains a permanent challenge. In this study, we implement ",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791885575590",
+    "timestamp": "2026-10-13T09:59:35.590Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is attention?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791884989263",
+    "timestamp": "2026-10-13T09:49:49.263Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain how Attention Is All You Need works",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791884918191",
+    "timestamp": "2026-10-13T09:48:38.191Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain how Attention Is All You Need works",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791884753333",
+    "timestamp": "2026-10-13T09:45:53.333Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain why Scaled Dot-Product Attention divides by sqrt(d_k).",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791884576570",
+    "timestamp": "2026-10-13T09:42:56.570Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Explain why Scaled Dot-Product Attention divides by sqrt(d_k).",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791884470193",
+    "timestamp": "2026-10-13T09:41:10.193Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791883838921",
+    "timestamp": "2026-10-13T09:30:38.921Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is attention?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791883496055",
+    "timestamp": "2026-10-13T09:24:56.055Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the attention mechanism in Transformer?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791879339881",
+    "timestamp": "2026-10-13T08:15:39.881Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the attention mechanism in Transformer?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791879278823",
+    "timestamp": "2026-10-13T08:14:38.823Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "How does Multi-Head Attention replace recurrence in sequence modeling?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791879227576",
+    "timestamp": "2026-10-13T08:13:47.576Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the attention mechanism in Transformer?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791879158110",
+    "timestamp": "2026-10-13T08:12:38.110Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the attention mechanism in Transformer?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791878781637",
+    "timestamp": "2026-10-13T08:06:21.637Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What datasets and benchmarks are evaluated?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791878508139",
+    "timestamp": "2026-10-13T08:01:48.140Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What datasets and benchmarks are evaluated?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791878059789",
+    "timestamp": "2026-10-13T07:54:19.789Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1791877987234_k4vu"
+    ],
+    "paper_titles": [
+      "Received April 28, 2022, accepted May 19, 2022, date of publication May 27, 2022, date of current version June 6, 2022.",
+      "Attention Is All You Need"
+    ],
+    "question": "common topic discussed in these 2 papers",
+    "mode": "ours",
+    "answer_preview": "Scaled Dot-Product Attention Multi-Head Attention Figure 2: (left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several atte",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791877889304",
+    "timestamp": "2026-10-13T07:51:29.304Z",
+    "paper_ids": [
+      "paper_1789927908284_fpzm"
+    ],
+    "paper_titles": [
+      "paper3"
+    ],
+    "question": "What is this paper about?",
+    "mode": "ours",
+    "answer_preview": "\u000e\u000f\u0010\u000e\u0011\b\u0012\u0013\u0014\u0013\u000f\u0015\u0016\b\u0012\u0017\u0018\u0019\u0019\u001a\u001b\u001a\u0014\u0018\u0016\u001a\u0013\u000f\b\u0015\u0019\u001a\u000f\u001c\b\u001d\u000e\u0014\u001a\u0019\u001a\u0013\u000f\b \u0011\u000e\u000e\b \u0018\u000f\u0010\b\u001d\u000e\u000e\u001e\b\u001f\u000e\u0018\u0011\u000f\u001a\u000f\u001c\b \u000e\u0014 \u000f\u001a!\u0015\u000e\b \u0019 \u0018\u000f\u001a\b\" \u0018\u0016\b \u0002\u0003\u0004\u0005\u0006\u0007\u0002\b \u0002 \b \u0005 \u0006\u0004 \u0002\u000e\u000f\u0010\u0004\u0011\u000f\u0004\u0002\u0002 \u0012\u0013\u000e\u0002\u0014\u0011\u0010\u0015\u0004 \u0016\u0010\u0006\u0017\b \"\u000e\u000f\u001c\u0018\u0017\u0015\u0011\u0015#\b \u000f\u0010",
+    "latency_ms": 280,
+    "tokens": 850
+  },
+  {
+    "id": "q_1791877876069",
+    "timestamp": "2026-10-13T07:51:16.069Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "which architecture is introduced on this ",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791877715913",
+    "timestamp": "2026-10-13T07:48:35.913Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "What is the main architecture proposed in this paper?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791877577247",
+    "timestamp": "2026-10-13T07:46:17.247Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "xai methods used",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791877536763",
+    "timestamp": "2026-10-13T07:45:36.763Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "xai methods",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791877465383",
+    "timestamp": "2026-10-13T07:44:25.383Z",
+    "paper_ids": [
+      "1609.02907_GCN"
+    ],
+    "paper_titles": [
+      "Semi-Supervised Classification with Graph Convolutional Networks"
+    ],
+    "question": "How does GCN handle neighborhood aggregation?",
+    "mode": "ours",
+    "answer_preview": "Published as a conference paper at ICLR 2017 6.3 TRAINING TIME PER EPOCH 1k 10k 100k 1M 10M # Edges 10-3 10-2 10-1 100 101 Sec./epoch * GPU CPU Figure",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791877080353",
+    "timestamp": "2026-10-13T07:38:00.353Z",
+    "paper_ids": [
+      "1609.02907_GCN"
+    ],
+    "paper_titles": [
+      "Semi-Supervised Classification with Graph Convolutional Networks"
+    ],
+    "question": "What is GCN?",
+    "mode": "ours",
+    "answer_preview": "Published as a conference paper at ICLR 2017 2 FAST APPROXIMATE CONVOLUTIONS ON GRAPHS In this section, we provide theoretical motivation for a specif",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791873357512",
+    "timestamp": "2026-10-13T06:35:57.512Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "Methodology followed in building a dl for funndus images",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791829150792",
+    "timestamp": "2026-10-12T18:19:10.792Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1789911708499_0loc"
+    ],
+    "paper_titles": [
+      "Kannada Word Detection in Heterogeneous Scene Images",
+      "Attention Is All You Need"
+    ],
+    "question": "are these 2 papers related?",
+    "mode": "ours",
+    "answer_preview": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art mode",
+    "latency_ms": 280,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791828791125",
+    "timestamp": "2026-10-12T18:13:11.125Z",
+    "paper_ids": [
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods"
+    ],
+    "question": "explain thi paper",
+    "mode": "ours",
+    "answer_preview": "-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --",
+    "latency_ms": 280,
+    "tokens": 623
+  },
+  {
+    "id": "q_1791397182464",
+    "timestamp": "2026-10-07T18:19:42.464Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need"
+    ],
+    "question": "Why does Scaled Dot-Product Attention divide by sqrt(d_k)?",
+    "mode": "ours",
+    "answer_preview": "Scaled Dot-Product Attention Multi-Head Attention Figure 2: (left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several atte",
+    "latency_ms": 320,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791396971134",
+    "timestamp": "2026-10-07T18:16:11.134Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1789911568626_3bmr",
+      "paper_1791396888345_17w0"
+    ],
+    "paper_titles": [
+      "Received April 28, 2022, accepted May 19, 2022, date of publication May 27, 2022, date of current version June 6, 2022.",
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods",
+      "Attention Is All You Need"
+    ],
+    "question": "how evaluation works in fundus images classifucation",
+    "mode": "ours",
+    "answer_preview": "B. Goutam et al.: Comprehensive Review of Deep Learning Strategies in Retinal Disease Diagnosis FIGURE 2. Overall DL framework for retinal disease dia",
+    "latency_ms": 320,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791396901346",
+    "timestamp": "2026-10-07T18:15:01.346Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1789911568626_3bmr",
+      "paper_1791396888345_17w0"
+    ],
+    "paper_titles": [
+      "Received April 28, 2022, accepted May 19, 2022, date of publication May 27, 2022, date of current version June 6, 2022.",
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods",
+      "Attention Is All You Need"
+    ],
+    "question": "how these papers are related?",
+    "mode": "ours",
+    "answer_preview": "Received April 28, 2022, accepted May 19, 2022, date of publication May 27, 2022, date of current version June 6, 2022. Digital Object Identifier 10.1",
+    "latency_ms": 320,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791396848356",
+    "timestamp": "2026-10-07T18:14:08.356Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "paper_1789927908284_fpzm",
+      "paper_1789911568626_3bmr"
+    ],
+    "paper_titles": [
+      "paper3",
+      "Fundus Image Analysis for Age related Retinal Disease Detection using Deep Learning and XAI Methods",
+      "Attention Is All You Need"
+    ],
+    "question": "how these papers are related?",
+    "mode": "ours",
+    "answer_preview": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalis",
+    "latency_ms": 320,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1791396637280",
+    "timestamp": "2026-10-07T18:10:37.280Z",
+    "paper_ids": [
+      "1706.03762_Attention_Is_All_You_Need",
+      "1810.04805_BERT"
+    ],
+    "paper_titles": [
+      "Attention Is All You Need",
+      "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    ],
+    "question": "How does BERT build on the Transformer architecture?",
+    "mode": "ours",
+    "answer_preview": "1 Introduction Recurrent neural networks, long short-term memory [13] and gated recurrent [7] neural networks in particular, have been firmly establis",
+    "latency_ms": 320,
+    "tokens": 2400
+  },
+  {
+    "id": "q_1789972352010_un1h",
+    "timestamp": "2026-09-21T06:32:32.010Z",
+    "paper_id": "paper_1789927908284_fpzm",
+    "paper_title": "paper3",
+    "question": "author of paper",
+    "mode": "dynamic",
+    "answer_preview": "The authors of the paper \"Tender Coconut Classification using Decision Tree and Deep Learning Technique\" are:  *   **Ishani Bhat** *   **Umadevi V** *   **Nishc",
+    "latency_ms": 365,
+    "tokens": 1840
+  }
+]

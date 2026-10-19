@@ -1,0 +1,12 @@
+neo4j>=5.5.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+fastapi>=0.95.0
+uvicorn>=0.20.0
+pydantic-settings>=2.0.0
+networkx>=3.0
+python-louvain>=0.16
+httpx>=0.24
+pypdf>=4.0
+python-multipart>=0.0.6
+pytest>=7.0
