@@ -20,19 +20,6 @@ const DISTINCTIVE = new Set([
   "self", "multihead", "positional", "encoder", "decoder",
 ]);
 
-const KNOWN_BRIDGES: { source: string; target: string; type: string }[] = [
-  { source: "transformer", target: "bert", type: "PRETRAINED_ARCHITECTURE" },
-  { source: "transformer", target: "rag", type: "GENERATOR_BACKBONE" },
-  { source: "gcn", target: "graphsage", type: "SPECTRAL_TO_INDUCTIVE" },
-  { source: "gcn", target: "gat", type: "ANISOTROPIC_ATTENTION_EVOLUTION" },
-  { source: "graphsage", target: "gat", type: "NEIGHBORHOOD_AGGREGATION" },
-  { source: "deepwalk", target: "node2vec", type: "ALGORITHMIC_EVOLUTION" },
-  { source: "bert", target: "cot", type: "PRETRAINED_REASONING_BASE" },
-  { source: "rag", target: "cot", type: "GROUNDED_MULTI_STEP_REASONING" },
-  { source: "mha", target: "gat", type: "ATTENTION_MECHANISM_TRANSFER" },
-  { source: "scaled_dot", target: "gat", type: "ATTENTION_SCORING" },
-];
-
 export function originalNodeId(id: string): string {
   const idx = id.lastIndexOf("::");
   return idx >= 0 ? id.slice(idx + 2) : id;
@@ -59,7 +46,7 @@ export function entityTokens(value: string): Set<string> {
   );
 }
 
-function namespaceNode(paperId: string, node: GraphNode): GraphNode {
+export function namespaceNode(paperId: string, node: GraphNode): GraphNode {
   const original = originalNodeId(node.id);
   return {
     ...node,
@@ -72,22 +59,6 @@ function namespaceNode(paperId: string, node: GraphNode): GraphNode {
   };
 }
 
-const CONCEPT_FAMILIES: string[][] = [
-  ["attention", "transformer", "bert", "multihead", "self", "gat", "positional", "encoder", "decoder"],
-  ["gcn", "convolution", "spectral", "graphsage", "gat", "message", "aggregation", "inductive", "sage"],
-  ["deepwalk", "node2vec", "walk", "embedding", "skipgram"],
-  ["rag", "retriever", "retrieval", "generator", "bert", "dense"],
-  ["cot", "reasoning", "prompt", "chain"],
-];
-
-function familyHits(tokens: Set<string>): Set<number> {
-  const hits = new Set<number>();
-  CONCEPT_FAMILIES.forEach((family, index) => {
-    if (family.some((tok) => tokens.has(tok))) hits.add(index);
-  });
-  return hits;
-}
-
 function nodesRelated(a: GraphNode, b: GraphNode): { type: string; weight: number } | null {
   const na = normalizeEntityName(a.name);
   const nb = normalizeEntityName(b.name);
@@ -95,34 +66,28 @@ function nodesRelated(a: GraphNode, b: GraphNode): { type: string; weight: numbe
   if (GENERIC.has(na) || GENERIC.has(nb)) return null;
 
   if (na === nb) {
-    return { type: "SAME_ENTITY_NAME", weight: 1 };
+    return { type: "SAME_CONCEPT", weight: 1.0 };
   }
 
   const ta = entityTokens(`${a.name} ${a.type || ""} ${a.description || ""}`);
   const tb = entityTokens(`${b.name} ${b.type || ""} ${b.description || ""}`);
   if (ta.size === 0 || tb.size === 0) return null;
 
-  const familiesA = familyHits(ta);
-  const familiesB = familyHits(tb);
-  for (const fam of familiesA) {
-    if (familiesB.has(fam)) {
-      return { type: "SHARED_PARADIGM", weight: 0.88 };
-    }
-  }
-
   let overlap = 0;
   const shared: string[] = [];
   for (const tok of ta) {
     if (tb.has(tok)) {
-      overlap += DISTINCTIVE.has(tok) ? 2 : 1;
-      shared.push(tok);
+      if (DISTINCTIVE.has(tok)) {
+        overlap += 2;
+        shared.push(tok);
+      }
     }
   }
-  if (overlap === 0) return null;
+  if (overlap === 0 || shared.length === 0) return null;
 
   const denom = Math.min(ta.size, tb.size);
-  if (shared.some((tok) => DISTINCTIVE.has(tok)) || overlap / denom >= 0.3) {
-    return { type: "RELATED_CONCEPT", weight: Math.min(0.95, 0.45 + overlap * 0.12) };
+  if (overlap / denom >= 0.5) {
+    return { type: "SHARED_PARADIGM", weight: Math.min(0.95, 0.5 + overlap * 0.1) };
   }
   return null;
 }
@@ -148,78 +113,33 @@ export function buildCrossPaperBridges(nodes: GraphNode[]): GraphEdge[] {
     bridges.push(edge);
   };
 
-  const byOriginal = new Map<string, GraphNode[]>();
-  for (const node of nodes) {
-    const orig = originalNodeId(node.id);
-    const list = byOriginal.get(orig) || [];
-    list.push(node);
-    byOriginal.set(orig, list);
-  }
-
-  for (const known of KNOWN_BRIDGES) {
-    const lefts = byOriginal.get(known.source) || [];
-    const rights = byOriginal.get(known.target) || [];
-    for (const left of lefts) {
-      for (const right of rights) {
-        if (paperIdFromNode(left) === paperIdFromNode(right)) continue;
-        push({
-          source: left.id,
-          target: right.id,
-          type: known.type,
-          is_bridge: true,
-          weight: 0.95,
-        });
-      }
-    }
-  }
-
+  // Only create bridges where genuine shared concepts exist across papers
   for (let i = 0; i < paperIds.length; i++) {
     for (let j = i + 1; j < paperIds.length; j++) {
-      const leftNodes = (byPaper.get(paperIds[i]) || []).slice(0, 48);
-      const rightNodes = (byPaper.get(paperIds[j]) || []).slice(0, 48);
-      let pairLinks = 0;
+      const leftNodes = byPaper.get(paperIds[i]) || [];
+      const rightNodes = byPaper.get(paperIds[j]) || [];
 
       for (const left of leftNodes) {
         for (const right of rightNodes) {
-          if (pairLinks >= 14) break;
           const related = nodesRelated(left, right);
           if (!related) continue;
+
           push({
             source: left.id,
             target: right.id,
             type: related.type,
             is_bridge: true,
             weight: related.weight,
+            paper_ids: [paperIds[i], paperIds[j]],
           });
           push({
             source: right.id,
             target: left.id,
             type: related.type,
             is_bridge: true,
-            weight: related.weight * 0.9,
+            weight: related.weight,
+            paper_ids: [paperIds[j], paperIds[i]],
           });
-          pairLinks += 1;
-        }
-      }
-
-      const hubs = (nodesForPaper: GraphNode[]) => {
-        const preferred = nodesForPaper.filter((n) =>
-          ["Architecture", "Method", "Theory"].includes(n.type)
-        );
-        return (preferred.length ? preferred : nodesForPaper).slice(0, 3);
-      };
-      if (pairLinks === 0) {
-        const leftHubs = hubs(leftNodes);
-        const rightHubs = hubs(rightNodes);
-        for (let h = 0; h < Math.min(leftHubs.length, rightHubs.length); h++) {
-          push({
-            source: leftHubs[h].id,
-            target: rightHubs[h].id,
-            type: "CROSS_PAPER_BRIDGE",
-            is_bridge: true,
-            weight: 0.7,
-          });
-          pairLinks += 1;
         }
       }
     }

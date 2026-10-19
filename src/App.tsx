@@ -273,19 +273,10 @@ try {
   console.warn("Failed to delete paper from primary backend:", err);
 }
 
-try {
-  await fetch(`http://127.0.0.1:8001/api/papers/${encodeURIComponent(paperId)}`, {
-    method: "DELETE",
-  }).catch(() => {});
-} catch {}
-
 // If all papers deleted, ensure Neo4j is completely purged
 if (remaining.length === 0) {
   try {
     await fetch("/api/neo4j/clear", { method: "POST" });
-  } catch {}
-  try {
-    await fetch("http://127.0.0.1:8001/api/neo4j/clear", { method: "POST" });
   } catch {}
 }
 
@@ -342,9 +333,25 @@ const noEvidence =
 `${rawAnswer} ${payload.status || ""} ${payload.error || ""}`
 );
 
-if (!response.ok || !rawAnswer || noEvidence) {
+if (payload.error_code === "no_indexed_graph") {
+  const errMsg = payload.error || "Paper has no indexed graph.";
+  setStreamedAnswer(errMsg);
+  setQueryResult({
+    mode: "multi_paper",
+    engine: "None",
+    answer: errMsg,
+    error_code: "no_indexed_graph",
+    trace: freshTrace,
+    total_tokens: 0,
+    total_llm_calls: 0,
+    latency_ms: 0,
+  });
+  return;
+}
+
+if (!response.ok || !rawAnswer) {
 console.warn(
-"Multi-paper endpoint unusable, falling back to stream:",
+"Multi-paper endpoint failed:",
 payload?.error || payload?.status || response.status
 );
 } else {

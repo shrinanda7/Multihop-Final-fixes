@@ -57,6 +57,8 @@ export interface GraphEdge {
   type: string;
   weight?: number;
   is_bridge?: boolean;
+  paper_id?: string;
+  paper_ids?: string[];
 }
 
 export interface SCCDiagnostics {
@@ -91,6 +93,15 @@ export interface CommunityInfo {
   summary?: string;
 }
 
+export interface EvidenceItem {
+  evidence_id: string;
+  paper_id: string;
+  paper_title: string;
+  chunk_id: string;
+  content: string;
+  page?: number | string;
+}
+
 export interface QueryResult {
   mode: string;
   answer: string;
@@ -103,9 +114,13 @@ export interface QueryResult {
   total_llm_calls: number;
   latency_ms: number;
   bridge_kept_count?: number;
-  cited_passages?: { paper_title: string; text: string; score: number }[];
+  cited_passages?: { chunk_id?: string; paper_id?: string; paper_title: string; text: string; score: number }[];
+  evidence?: EvidenceItem[];
   papers_evaluated?: string[];
   engine?: string;
+  traversal_mode?: string;
+  is_cross_paper_bridged?: boolean;
+  error_code?: string;
 }
 
 export interface ConfigState {

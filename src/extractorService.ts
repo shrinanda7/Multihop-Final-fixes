@@ -256,45 +256,13 @@ function processRawExtraction(
       edgeSet.add(key);
 
       const relType = (rel.type || "RELATED_TO").toUpperCase().replace(/[^A-Z0-9_]/g, "_");
-      const isBridge = relType.includes("EVALUATED") || relType.includes("BENCHMARK") || relType.includes("DATASET");
 
       edges.push({
         source: srcId,
         target: tgtId,
         type: relType,
         weight: typeof rel.weight === "number" ? Math.max(0.1, Math.min(1.0, rel.weight)) : 0.9,
-        is_bridge: isBridge,
-      });
-    }
-  }
-
-  // Ensure graph connectivity: link disconnected components to root/first entity
-  const connectedTargets = new Set(edges.map((e) => e.target));
-  const rootNode = nodes[0];
-  for (let i = 1; i < nodes.length; i++) {
-    const n = nodes[i];
-    if (!edges.some((e) => e.source === n.id || e.target === n.id)) {
-      edges.push({
-        source: rootNode.id,
-        target: n.id,
-        type: n.type === "Dataset" ? "EVALUATED_ON" : n.type === "Metric" ? "MEASURED_BY" : "CONTAINS",
-        weight: 0.85,
-        is_bridge: n.type === "Dataset" || n.type === "Metric",
-      });
-    }
-  }
-
-  // Ensure at least one directed cycle if there are methods/architecture for SCC quotient reduction
-  const archNodes = nodes.filter((n) => n.type === "Architecture" || n.type === "Method");
-  if (archNodes.length >= 2) {
-    const n1 = archNodes[0];
-    const n2 = archNodes[1];
-    if (!edges.some((e) => e.source === n2.id && e.target === n1.id)) {
-      edges.push({
-        source: n2.id,
-        target: n1.id,
-        type: "FEEDBACK_LOOP",
-        weight: 0.88,
+        is_bridge: false,
       });
     }
   }
@@ -394,16 +362,6 @@ function extractHeuristically(
     }
   }
 
-  // Directed feedback cycle between top 2 methods
-  if (nodes.length > 2) {
-    edges.push({
-      source: nodes[2].id,
-      target: nodes[1].id,
-      type: "OPTIMIZATION_LOOP",
-      weight: 0.85,
-    });
-  }
-
   return { nodes, edges };
 }
 
@@ -414,10 +372,12 @@ function finalizeGraph(
 ): { original_graph: GraphTopology; compressed_graph: GraphTopology } {
   // Compute Tarjan bridges and cut-vertices
   const bridgeAnalysis = findBridgesAndArticulationPoints(nodes, edges);
+  const bridgeSet = new Set(bridgeAnalysis.bridges.map(([u, v]) => `${u}---${v}`));
+
   for (const edge of edges) {
-    if (bridgeAnalysis.bridges.some(([u, v]) => (edge.source === u && edge.target === v) || (edge.source === v && edge.target === u))) {
-      edge.is_bridge = true;
-    }
+    edge.is_bridge =
+      bridgeSet.has(`${edge.source}---${edge.target}`) ||
+      bridgeSet.has(`${edge.target}---${edge.source}`);
   }
 
   const origTopology: GraphTopology = {
